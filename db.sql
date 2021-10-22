@@ -52,6 +52,8 @@ create table orders(
     order_date date not null
 );
 
+--laslty create the order_items table connected to product_id and order_id as the foreign keys
+
 create table order_items(
     order_id integer references orders(order_id) not null,
     product_id integer references products(product_id) not null.
