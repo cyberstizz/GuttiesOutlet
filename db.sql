@@ -1,3 +1,5 @@
+--first creating the users table with the user id as the foreign key
+
 create table users(
 user_id varchar(20) primary key,
 session_id integer unique not null,
