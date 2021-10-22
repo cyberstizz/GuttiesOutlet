@@ -1,4 +1,4 @@
---first creating the users table with the user id as the foreign key
+--first creating the users table with the user id as the primary key
 
 create table users(
 user_id varchar(20) primary key,
@@ -7,6 +7,8 @@ user_password varchar(20) not null,
 email_address unique not null,
 physical_address varchar(50)
 );
+
+--create the products table with the product id as the primary key
 
 create table products(
     product_id  integer primary key,
