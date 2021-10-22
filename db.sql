@@ -43,6 +43,8 @@ create table comments(
     post_date date not null
 );
 
+--create the orders table with order_id as the primary key and user_id as the foreign key
+
 create table orders(
     order_id integer primary key,
     user_id varchar(20) references users(user_id) not null,
