@@ -29,8 +29,23 @@ create table ratings(
 );
 
 create table comments(
-    user_id varchar(20) refereneces users(user_id) not null,
+    user_id varchar(20) references users(user_id) not null,
     product_id integer references products(product_id) not null,
     comment_content varchar(120) not null,
     post_date date not null
+);
+
+create table orders(
+    order_id integer primary key,
+    user_id varchar(20) references users(user_id) not null,
+    total_price integer not null,
+    order_date date not null
+);
+
+create table order_items(
+    order_id integer references orders(order_id) not null,
+    product_id integer references products(product_id) not null.
+    quantity integer not null,
+    product_price integer references products(product_price) not null,
+    total_price integer not null
 );
