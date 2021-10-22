@@ -34,6 +34,8 @@ create table ratings(
     star_count integer not null
 );
 
+--create the comments table with user_id and product_id as the foreign keys
+
 create table comments(
     user_id varchar(20) references users(user_id) not null,
     product_id integer references products(product_id) not null,
