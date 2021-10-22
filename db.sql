@@ -27,3 +27,10 @@ create table ratings(
     rating_content varchar(25),
     star_count integer not null
 );
+
+create table comments(
+    user_id varchar(20) refereneces users(user_id) not null,
+    product_id integer references products(product_id) not null,
+    comment_content varchar(120) not null,
+    post_date date not null
+);
