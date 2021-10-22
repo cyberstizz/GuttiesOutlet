@@ -20,3 +20,10 @@ create table products(
     product_delivery_time varchar(20) not null,
     date_added date not null
 );
+
+create table ratings(
+    user_id varchar(20) references users(user_id) not null,
+    product_id integer references products(product_id) not null,
+    rating_content varchar(25),
+    star_count integer not null
+);
