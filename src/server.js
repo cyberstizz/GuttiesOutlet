@@ -1,4 +1,4 @@
-import express from 'express'; //pointing to express dependancy
+const express from 'express'; //pointing to express dependancy
 const app = express(); // initiation of server as app variable
 const port = process.env.PORT || 5000; // created port variable in case of environment variables
 
